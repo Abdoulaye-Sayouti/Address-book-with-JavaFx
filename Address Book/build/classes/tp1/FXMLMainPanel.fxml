@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.25379853685987624" prefHeight="350.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp1.MainPanelController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="268.0" prefWidth="147.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Address Books">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane maxHeight="-Infinity" prefHeight="331.0" prefWidth="147.0">
+                     <content>
+                        <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="145.0">
+                           <children>
+                              <ListView fx:id="contact_book_list" maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#handleBookListChoice" prefHeight="282.0" prefWidth="137.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="347.0" prefWidth="439.0">
+               <items>
+                  <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="list_contact" onMouseClicked="#populateDetail" prefHeight="100.0" prefWidth="439.0">
+                           <columns>
+                              <TableColumn fx:id="nom" prefWidth="113.99999749660492" text="Nom" />
+                              <TableColumn fx:id="prenom" prefWidth="101.99999237060547" text="Prénom" />
+                              <TableColumn fx:id="email" prefWidth="250.00001525878906" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="467.0">
+                     <children>
+                        <VBox prefHeight="238.0" prefWidth="439.0">
+                           <children>
+                              <HBox prefHeight="21.0" prefWidth="467.0">
+                                 <children>
+                                    <Label text="Contact Details : " />
+                                    <Label fx:id="ct_detail" maxWidth="-Infinity" prefHeight="17.0" prefWidth="343.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="218.0" prefWidth="439.0">
+                                 <children>
+                                    <VBox prefHeight="214.0" prefWidth="221.0">
+                                       <children>
+                                          <TitledPane animated="false" text="Identity">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox prefHeight="52.0" prefWidth="202.0">
+                                                         <children>
+                                                            <VBox prefHeight="52.0" prefWidth="43.0">
+                                                               <children>
+                                                                  <Label text="Name :" />
+                                                                  <Label text="Age :" />
+                                                                  <Label text="Email :" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets top="2.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                            <VBox prefHeight="41.0" prefWidth="154.0">
+                                                               <children>
+                                                                  <HBox prefHeight="52.0" prefWidth="145.0">
+                                                                     <children>
+                                                                        <StackPane prefHeight="18.0" prefWidth="21.0">
+                                                                           <children>
+                                                                              <Label fx:id="mr" text="Mr." />
+                                                                              <Label fx:id="ms" text="Ms.">
+                                                                                 <StackPane.margin>
+                                                                                    <Insets top="1.0" />
+                                                                                 </StackPane.margin></Label>
+                                                                           </children>
+                                                                        </StackPane>
+                                                                        <Label fx:id="name" prefHeight="17.0" prefWidth="117.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="2.0" />
+                                                                           </HBox.margin></Label>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <Label fx:id="age" prefHeight="17.0" prefWidth="150.0" />
+                                                                  <Label fx:id="d_email" prefHeight="8.0" prefWidth="152.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane prefHeight="231.0" prefWidth="202.0" text="Phone numbers">
+                                             <content>
+                                                <Pane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="list_phone" prefHeight="114.0" prefWidth="200.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="phone_type" prefWidth="58.66671860218048" />
+                                                          <TableColumn fx:id="num" prefWidth="138.66670608520508" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </Pane>
+                                             </content></TitledPane>
+                                       </children>
+                                    </VBox>
+                                    <TitledPane prefHeight="264.0" prefWidth="257.0" text="Address">
+                                       <content>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="238.0" spacing="10.0">
+                                                   <children>
+                                                      <Label fx:id="street" prefWidth="100.0" />
+                                                      <HBox prefHeight="90.0" prefWidth="228.0" spacing="10.0">
+                                                         <children>
+                                                            <Label fx:id="postCode" prefHeight="17.0" prefWidth="40.0" />
+                                                            <Label fx:id="city" prefHeight="17.0" prefWidth="97.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="See on map">
+                                                         <VBox.margin>
+                                                            <Insets left="120.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" top="20.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </Pane>
+                                       </content></TitledPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
