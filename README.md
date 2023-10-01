@@ -15,3 +15,9 @@ To run the TSP Visualization App, follow these steps:
 `java --module-path PATH-TO-FX --add-modules javafx.controls,javafx.fxml -jar TP1-Prototypage.jar`
 
 Replace `PATH-TO-FX` with the path to your JavaFX SDK.
+
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to contribute or report issues if you find any!
